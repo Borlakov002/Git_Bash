@@ -1,0 +1,29 @@
+touch bash2.txt
+cd
+mkdir ~/bash_practice/test3
+for f in ~/bash_practice/test3/file{4..6}.txt; do echo -e "row1\nrow2\nrow3\nrow4" > "$f"; done
+grep -i "row2" file5.txt
+grep -r "row" ~/bash_practice/test3/
+grep  -c "row" file6.txt
+find ~/bash_practice/test3 -name "*5*"
+find ~/bash_practice/test3 -name "file5.txt" -deleteexh
+echo "test" > ~/bash_practice/test3/file4.txt
+sed -i 's/test/fail/g' ~/bash_practice/test3/file4.txt
+echo "test" >> ~/bash_practice/test3/file4.txt
+ps -ef
+kill 666
+ping rusau.net
+ping -n 5 rusau.net
+curl -X GET "https://petstore.swagger.io/v2/pet/findByStatus?status=available"
+curl -X POST "https://petstore.swagger.io/v2/user" \
+     -H "Content-Type: application/json" \
+     -d '{
+           "id": 123,
+           "username": "newuser",
+           "firstName": "John",
+           "lastName": "Doe",
+           "email": "johndoe@example.com",
+           "password": "password123",
+           "phone": "1234567890",
+           "userStatus": 1
+         }'
